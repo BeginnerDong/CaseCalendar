@@ -1,0 +1,77 @@
+/**index.wxss**/
+@import "../../wxParse/wxParse.wxss"; 
+page{
+	width:100%;
+	min-height:100%;
+}
+.swiper{
+	width:100%;
+	height:330rpx;
+}
+swiper{
+	height:330rpx;
+}
+.swiper image{
+	width:100%;
+	height:100%;
+}
+.menu{
+	height:144rpx;
+}
+.menu image{
+	width:60rpx;
+	height:60rpx;
+}
+.menu_cont{
+	height:100%;
+	margin:30rpx auto;
+}
+.product{
+	height:200rpx;
+	margin-bottom:30rpx;
+
+}
+.product_box{
+	height:160rpx;
+
+}
+.product_detail{
+	width:100%;
+	height:150rpx;
+}
+.product_left{
+	width:29%;
+	height:160rpx;
+	text-align:right;
+}
+.product_left image{
+	width:180rpx;
+	height:160rpx;
+}
+.product_right{
+	width:71%;
+	height:160rpx;
+}
+.product_title {
+	width:100%;
+	height:30%;
+}
+.product_cont{
+	width:100%;
+	height:47%;
+	color:#685958;
+}
+.product_time{
+	width:100%;
+	height:23%;
+	color:#968d8d;
+}
+.notice{
+	position:fixed;
+	bottom:30%;
+	right:0;
+}
+.notice image{
+	width:88rpx;
+	height:88rpx;
+}

@@ -1,0 +1,84 @@
+<!--index3.wxml-->
+<view class="user_banner flex bg">
+    <view class="user_box flex">
+        <view class="banner_left flex">
+            <view class="" style="text-align:center;width:100%;">
+                <view class="user_img">
+                  <open-data type="userAvatarUrl"></open-data>
+                </view>
+            </view>
+        </view>
+        <view class="banner_right font30 color1">
+            小兵阿黄
+        </view>
+    </view>
+</view>
+<view id="order" class="w690">
+    <view  style="border-radius:20rpx;overflow:hidden;box-shadow:3px 3px 20px #f5f3f0;">
+        <view class="order w690 font30 color3" bindtap="intoPath" data-path="/pages/userOrder/userOrder">
+            <view class="user_order">
+                <view class="order_left flex">
+                    <view class="my_order font30 color2">我的案件</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="font24 w690 color6 bg1" style="padding-bottom:40rpx;" >
+            <view class="process flexRowBetween">
+                <view class="peocess_item item_other" bindtap="intoPath" data-path="/pages/userCase/userCase">
+                    <image src="/images/order_icon1.png"></image>
+                    <text>待办案件</text>
+                </view>
+                <view class="peocess_item" bindtap="intoPath" data-path="/pages/userCase/userCase">
+                    <image src="/images/order_icon2.png"></image>
+                    <text>已办案件</text>
+                </view>
+                <view class="peocess_item" bindtap="intoPath" data-path="/pages/userCase/userCase">
+                    <image src="/images/order_icon3.png"></image>
+                    <text>全部案件</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="user_all font30 color2" style="position:relative;top:-20rpx;">
+    <view class="user_infor flexRowBetween w710"  bindtap="intoPath" data-path="/pages/userIntroduce/userIntroduce">
+        <view class="user_left flexRowBetween">
+            <image src="/images/user_icon1.png"></image>
+            <text>平台简介</text>
+        </view>
+        <view class="next_page">
+            <image src="/images/next_page.png"></image>
+        </view>
+    </view>
+    <view class="user_infor flexRowBetween w710" bindtap="intoPath" data-path="/pages/userCollect/userCollect">
+        <view class="user_left flexRowBetween">
+            <image src="/images/user_icon2.png"></image>
+            <text>官方微信</text>
+        </view>
+        <view class="next_page">
+            <image src="/images/next_page.png"></image>
+        </view>
+    </view>
+</view>
+<view class="space_bottom"></view>
+<view class="navbar">
+    <view class="navbar_item">
+        <view class="nav_img">
+          <image src="/images/navbar1.png"></image>
+        </view>
+        <view class="text">首页</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/case/case">
+        <view class="nav_img">
+           <image src="/images/navbar2.png"></image>
+        </view>
+        <view class="text">案件</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/user/user">
+        <view class="nav_img">
+           <image src="/images/navbar3_a.png"></image>
+        </view>
+        <view class="text this-text">我的</view>
+    </view>
+</view>

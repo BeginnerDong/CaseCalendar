@@ -1,0 +1,159 @@
+<!--login.wxml-->
+<view class="tabs font30 flexRowBetween color2 bg1">
+    <view class="tabs_item " data-id="0" bindtap="tab">
+        <text class="color2 {{currentId == 0?'tabs_this':''}}">全部案件</text>
+    </view>
+    <view class="tabs_item " data-id="1" bindtap="tab">
+        <text class="color2 {{currentId == 1?'tabs_this':''}}">待办案件</text>
+    </view>
+    <view class="tabs_item " data-id="2" bindtap="tab">
+        <text class="color2 {{currentId == 2?'tabs_this':''}}">已办案件</text>
+    </view>
+</view>
+<view style="{{currentId == 0?'display:block':'display:none'}}" class="case_list bg1">
+  <view class="w690 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      原告
+    </view>
+    <view class="font26 color2 case_right">
+      张三
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font28 color6">
+      被告人
+    </view>
+    <view class="font26 color2 case_right">
+      李四
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      案由
+    </view>
+    <view class="font26 color2 case_right">
+      婚姻财产
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      涉及金额
+    </view>
+    <view class="font26 color2 case_right">
+      ¥11556
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      开庭时间
+    </view>
+    <view class="font26 color2 case_right">
+      2018-9-9
+    </view>
+  </view>
+</view>
+<view style="{{currentId == 1?'display:block':'display:none'}}" class="case_list bg1">
+  <view class="w690 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      原告
+    </view>
+    <view class="font26 color2 case_right">
+      张三
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font28 color6">
+      被告人
+    </view>
+    <view class="font26 color2 case_right">
+      李四
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      案由
+    </view>
+    <view class="font26 color2 case_right">
+      婚姻财产
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      涉及金额
+    </view>
+    <view class="font26 color2 case_right">
+      ¥11556
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      开庭时间
+    </view>
+    <view class="font26 color2 case_right">
+      2018-9-9
+    </view>
+  </view>
+</view>
+<view style="{{currentId == 2?'display:block':'display:none'}}" class="case_list bg1">
+  <view class="w690 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      原告
+    </view>
+    <view class="font26 color2 case_right">
+      张三
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font28 color6">
+      被告人
+    </view>
+    <view class="font26 color2 case_right">
+      李四
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      案由
+    </view>
+    <view class="font26 color2 case_right">
+      婚姻财产
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      涉及金额
+    </view>
+    <view class="font26 color2 case_right">
+      ¥11556
+    </view>
+  </view>
+  <view class="w690 bg1 flexRowBetween meeting_info">
+    <view class="font26 color6 case_left">
+      开庭时间
+    </view>
+    <view class="font26 color2 case_right">
+      2018-9-9
+    </view>
+  </view>
+</view>
+<view class="space_bottom"></view>
+<view class="navbar">
+    <view class="navbar_item">
+        <view class="nav_img">
+          <image src="/images/navbar1.png"></image>
+        </view>
+        <view class="text">首页</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/case/case">
+        <view class="nav_img">
+           <image src="/images/navbar2_a.png"></image>
+        </view>
+        <view class="text this-text">案件</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/user/user">
+        <view class="nav_img">
+           <image src="/images/navbar3.png"></image>
+        </view>
+        <view class="text">我的</view>
+    </view>
+</view>

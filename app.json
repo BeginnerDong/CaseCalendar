@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/case/case",
+    "pages/user/user",
+    "pages/userCase/userCase",
+    "pages/caseDetail/caseDetail",
+    "pages/userIntroduce/userIntroduce"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3e9dff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "#fff"
+  }
+}
