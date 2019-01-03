@@ -11,7 +11,7 @@
   </swiper>
 </view>
 <view class="menu  w690 font30 color6 shadow1" >
-    <view class="w690 flexRowBetween bg1 menu_cont">
+    <view class="w690 flexRowBetween bg1 menu_cont" bindtap="intoPath" data-path="/pages/indexCaseCalender/indexCaseCalender">
         <view class="color3" style="font-size:36rpx;">新建案例</view>
         <image src="/images/comment.png"></image>
     </view>
@@ -25,7 +25,7 @@
     </view>
 </view>
 <view class="w690">
-    <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/detail/detail">
+    <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/indexDetail/indexDetail">
         <view class="product_box flexRowBetween w710">
             <view class="product_right flexRowBetween">
                 <view class="product_detail">
@@ -41,7 +41,7 @@
             </view>
         </view>
     </view>
-    <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/detail/detail">
+    <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/indexDetail/indexDetail">
         <view class="product_box flexRowBetween w710">
             <view class="product_right flexRowBetween">
                 <view class="product_detail">
@@ -58,12 +58,12 @@
         </view>
     </view>
 </view>
-<view class="notice">
+<view class="notice" bindtap="intoPath" data-path="/pages/caseRemind/caseRemind">
     <image src="/images/notice.png"></image>
 </view>
 <view class="space_bottom"></view>
 <view class="navbar">
-    <view class="navbar_item">
+    <view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
         <view class="nav_img">
           <image src="/images/navbar1_a.png"></image>
         </view>

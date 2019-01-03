@@ -1,0 +1,31 @@
+/**index.wxss**/
+
+@import "../../wxParse/wxParse.wxss"; 
+page{
+	background:#fff;
+}
+.user_img{
+	width:100rpx;
+	height:100rpx;
+	border-radius:50%;
+	overflow:hidden;
+	margin:0px auto;
+}
+.remind{
+	width:100%;
+	height:150rpx;
+	border-bottom:solid 1px #eee;
+}
+.remind_cont{
+	width:100%;
+	height:100rpx;
+}
+.remind_left{
+	width:18%;
+}
+.remind_right{
+	width:82%;
+}
+.remind_top{
+	margin-bottom:20rpx;
+}

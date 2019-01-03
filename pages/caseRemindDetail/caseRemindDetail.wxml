@@ -1,0 +1,18 @@
+<view class="w690">
+	<view class="remind flex">
+		<view class="remind_cont flex">
+			<view class="remind_left">
+				<view class="user_img">
+                  <open-data type="userAvatarUrl"></open-data>
+                </view>
+			</view>
+			<view class="remind_right">
+				<view class="font28 color2">官方消息</view>
+			</view>
+		</view>
+	</view>
+	<view class=" font26 color6">
+		更新版本了！添加了部分优化功能，内容内容内容内容内 容内容内容内容内容内容内容内容内容你让女人内容内容 内容内容内容内容内容内
+	</view>
+	<view class="font24 color9 time">3分钟前</view>
+</view>

@@ -10,7 +10,7 @@
         <text class="color2 {{currentId == 2?'tabs_this':''}}">已办案件</text>
     </view>
 </view>
-<view style="{{currentId == 0?'display:block':'display:none'}}" class="case_list bg1">
+<view style="{{currentId == 0?'display:block':'display:none'}}" class="case_list bg1" bindtap="intoPath" data-path="/pages/caseDetail/caseDetail">
   <view class="w690 flexRowBetween meeting_info">
     <view class="font26 color6 case_left">
       原告
@@ -52,7 +52,7 @@
     </view>
   </view>
 </view>
-<view style="{{currentId == 1?'display:block':'display:none'}}" class="case_list bg1">
+<view style="{{currentId == 1?'display:block':'display:none'}}" class="case_list bg1" bindtap="intoPath" data-path="/pages/caseDetail/caseDetail">
   <view class="w690 flexRowBetween meeting_info">
     <view class="font26 color6 case_left">
       原告
@@ -94,7 +94,7 @@
     </view>
   </view>
 </view>
-<view style="{{currentId == 2?'display:block':'display:none'}}" class="case_list bg1">
+<view style="{{currentId == 2?'display:block':'display:none'}}" class="case_list bg1" bindtap="intoPath" data-path="/pages/caseDetail/caseDetail">
   <view class="w690 flexRowBetween meeting_info">
     <view class="font26 color6 case_left">
       原告
@@ -138,13 +138,13 @@
 </view>
 <view class="space_bottom"></view>
 <view class="navbar">
-    <view class="navbar_item">
+    <view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
         <view class="nav_img">
           <image src="/images/navbar1.png"></image>
         </view>
         <view class="text">首页</view>
     </view>
-    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/case/case">
+    <view class="navbar_item"  >
         <view class="nav_img">
            <image src="/images/navbar2_a.png"></image>
         </view>

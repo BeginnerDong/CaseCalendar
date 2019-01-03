@@ -51,7 +51,7 @@
             <image src="/images/next_page.png"></image>
         </view>
     </view>
-    <view class="user_infor flexRowBetween w710" bindtap="intoPath" data-path="/pages/userCollect/userCollect">
+    <view class="user_infor flexRowBetween w710" bindtap="intoPath" data-path="/pages/userPoster/userPoster">
         <view class="user_left flexRowBetween">
             <image src="/images/user_icon2.png"></image>
             <text>官方微信</text>

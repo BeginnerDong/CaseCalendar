@@ -1,0 +1,33 @@
+/**index.wxss**/
+
+@import "../../wxParse/wxParse.wxss"; 
+page{
+
+}
+.wx_cont{
+	width:400rpx;
+	height:416rpx;
+	position:absolute;
+	top:20%;
+	left:50%;
+	margin-left:-200rpx;
+	text-align:center;
+}
+.wx_cont image{
+	width:300rpx;
+	height:300rpx;
+	margin:30px auto 0rpx auto;
+}
+.poster{
+	width:352rpx;
+	height:124rpx;
+	position:absolute;
+	left:50%;
+	bottom:20%;
+	margin-left:-176rpx;
+}
+.poster image{
+	width:104rpx;
+	height:122rpx;
+	margin-right:30rpx;
+}

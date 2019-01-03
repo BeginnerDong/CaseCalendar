@@ -5,7 +5,14 @@
     "pages/user/user",
     "pages/userCase/userCase",
     "pages/caseDetail/caseDetail",
-    "pages/userIntroduce/userIntroduce"
+    "pages/userIntroduce/userIntroduce",
+    "pages/indexCaseCalender/indexCaseCalender",
+    "pages/indexNewCase/indexNewCase",
+    "pages/newCase/newCase",
+    "pages/indexDetail/indexDetail",
+    "pages/caseRemind/caseRemind",
+    "pages/caseRemindDetail/caseRemindDetail",
+    "pages/userPoster/userPoster"
 
   ],
   "window": {

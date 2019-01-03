@@ -1,0 +1,195 @@
+<!--login.wxml-->
+<view class="w690">
+  <view class="w690 bg1" style="margin-top:30rpx;">
+    <view class="all_tlt flex">
+        <view class="user_tilte">
+            <view class="font30 color2 basic_in">基本信息</view>
+            <view class="bottom_line"></view>
+        </view>
+    </view>
+  </view>
+  <view class="case_list bg1">
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_left flex">
+        <view class="input_before">原告</view>
+        <view class="case_input"><input></input></view>
+      </view>
+      <view class="case_right flex">
+        <view class="input_before">委托代理人</view>
+        <view class="case_input"><input></input></view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_left flex">
+        <view class="input_before">被告</view>
+        <view class="case_input"><input></input></view>
+      </view>
+      <view class="case_right flex">
+        <view class="input_before">委托代理人</view>
+        <view class="case_input"><input></input></view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween border_b">
+      <view class="case_row flex1">
+        <view class="input_before">案由</view>
+        <view class="textarea">
+            <textarea height="auto"  placeholder="案由">
+            </textarea>
+        </view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween border_b">
+      <view class="case_row flex1">
+        <view class="input_before">诉讼标的</view>
+        <view class="textarea">
+            <textarea height="auto" placeholder="诉讼标的">
+              
+            </textarea>
+        </view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before">开庭时间</view>
+        <view class="input">
+          <picker mode="date" value="{{date}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}"
+        >
+          <view class="picker">{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}</view>
+        </picker>
+        </view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before">调节时间</view>
+        <view class="input1">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01"bindchange="bindDateChange">
+            <view class="flex picker_in">
+              <view class="picker">{{date}}</view>
+              <view class="down flex"><image src="/images/down.png"></image></view>
+            </view>
+          </picker>
+        </view>
+        <view class="input1">
+          <picker mode="time" value="{{time}}"  start="09:01"  end="21:01"  bindchange="bindTimeChange">
+            <view class="flex picker_in">
+              <view class="picker">{{time}}</view>
+              <view class="down flex"><image src="/images/down.png"></image></view>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before">开庭地点</view>
+        <input></input>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before">争议地点</view>
+        <input></input>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before" style="width:30%">需要查明问题</view>
+        <input></input>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info" bindtap="show">
+      <view class="case_row_input flexRowBetween">
+        <view class="input_before">其他</view>
+        <image src="{{is_show?'/images/up.png':'/images/next_page.png'}}"></image>
+      </view>
+    </view>
+    <view class="folding" wx:if="{{is_show}}">
+      <view class="w690 flexRowBetween meeting_info">
+        <view class="case_row_input flex">
+          <view class="input_before">法庭组成员</view>
+          <input></input>
+        </view>
+      </view>
+      <view class="w690 flexRowBetween meeting_info">
+        <view class="case_row_input flex">
+          <view class="input_before" style="width:45%">是否已通知原被告</view>
+          <input></input>
+        </view>
+      </view>
+      <view class="w690 flexRowBetween meeting_info">
+        <view class="case_row_input flex">
+          <view class="input_before">办案法规</view>
+          <input></input>
+        </view>
+      </view>
+      <view class="w690 flexRowBetween meeting_info">
+        <view class="case_row_input flex">
+          <view class="input_before">使用程序</view>
+          <input></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="w690 bg1">
+    <view class="all_tlt flex">
+        <view class="user_tilte user_tilte1">
+            <view class="font30 color2 basic_in ">设置</view>
+            <view class="bottom_line"></view>
+        </view>
+    </view>
+  </view>
+  <view class="case_list bg1">
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before"  style="width:30%;">提醒时间设置</view>
+        <view class="input1">
+          <picker mode="date" value="{{noticeDate}}" start="2015-09-01" end="2222-09-01"
+            bindchange="bindNoticeDate"
+          >
+            <view class="picker">{{noticeDate}}</view>
+          </picker>
+        </view>
+        <view class="input1">
+          <picker mode="time" value="{{timeTwo}}"  start="09:01"  end="21:01"  bindchange="bindtimeTwo">
+            <view class="flex picker_in">
+              <view class="picker">{{timeTwo}}</view>
+              <view class="down flex"><image src="/images/down.png"></image></view>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before" style="width:30%;">提醒方式</view>
+        <view class="input">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="flex picker_in">
+              <view class="picker">{{array[index]}}</view>
+              <view class="down flex"><image src="/images/down.png"></image></view>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+   <view class="w690 flexRowBetween meeting_info">
+      <view class="case_row_input flex">
+        <view class="input_before" style="width:30%;">提醒时长</view>
+        <view class="input">
+            <picker bindchange="bindChooseDate" value="{{current}}" range="{{dateArray}}">
+              <view class="flex picker_in">
+                <view class="picker">{{dateArray[current]}}</view>
+                 <view class="down flex"><image src="/images/down.png"></image></view>
+              </view>
+            </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<form>
+  <button class="submit_info">
+    提交
+  </button>
+</form>

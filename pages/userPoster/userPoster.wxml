@@ -1,0 +1,8 @@
+<view class="wx_cont shadow1 bg1">
+	<image src="/images/img5@2x.png"></image>
+	<view class="font30 color6" style="text-align: center;">名称名名称名称称</view>
+</view>
+<view class="poster flexRowBetween">
+	<image src="/images/icon4@2x.png"></image>
+	<view class="font26 color6">你的权益我们保障</view>
+</view>

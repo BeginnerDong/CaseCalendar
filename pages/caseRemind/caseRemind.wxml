@@ -1,0 +1,18 @@
+<view class="remind flex" bindtap="intoPath" data-path="/pages/caseRemindDetail/caseRemindDetail">
+	<view class="w690">
+		<view class="remind_cont flex">
+			<view class="remind_left">
+				<view class="user_img">
+                  <open-data type="userAvatarUrl"></open-data>
+                </view>
+			</view>
+			<view class="remind_right">
+				<view class="remind_top flexRowBetween">
+					<view class="font28 color2">官方消息</view>
+					<view class="font24 color9">3分钟前</view>
+				</view>
+				<view class="remind_bottom font26 color6  avoidOverflow">更新版本了！添加了部分优化功能，供了！添加了部分了！添加了部分了！添加了部分了！添加了部分了！添加了部分</view>
+			</view>
+		</view>
+	</view>
+</view>

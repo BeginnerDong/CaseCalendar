@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -62,7 +62,49 @@
 				{
 					"id": -1,
 					"name": "案件详情",
-					"pathName": "pages/caseDetail/caseDetail"
+					"pathName": "pages/caseDetail/caseDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新日历案例",
+					"pathName": "pages/indexCaseCalender/indexCaseCalender",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建案件",
+					"pathName": "pages/indexNewCase/indexNewCase",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建案件",
+					"pathName": "pages/indexNewCase/indexNewCase",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建档案",
+					"pathName": "pages/newCase/newCase",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "简介",
+					"pathName": "pages/userIntroduce/userIntroduce",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "案件提醒",
+					"pathName": "pages/caseRemind/caseRemind",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "官方微信",
+					"pathName": "pages/userPoster/userPoster"
 				}
 			]
 		}
