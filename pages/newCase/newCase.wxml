@@ -51,11 +51,21 @@
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before">开庭时间</view>
-        <view class="input">
-          <picker mode="date" value="{{date}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}"
-        >
-          <view class="picker">{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}</view>
-        </picker>
+           <view class="input1">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01"bindchange="bindDateChange">
+            <view class="flex picker_in">
+              <view class="picker">{{date}}</view>
+              <view class="down flex"><image src="/images/down.png"></image></view>
+            </view>
+          </picker>
+        </view>
+        <view class="input1">
+          <picker mode="time" value="{{time}}"  start="09:01"  end="21:01"  bindchange="bindTimeChange">
+            <view class="flex picker_in">
+              <view class="picker">{{time}}</view>
+              <view class="down flex"><image src="/images/down.png"></image></view>
+            </view>
+          </picker>
         </view>
       </view>
     </view>

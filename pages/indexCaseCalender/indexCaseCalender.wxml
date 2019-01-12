@@ -19,13 +19,11 @@
             <view class="day flex" bindtap="intoPath" data-path="/pages/indexNewCase/indexNewCase">
                 <view class="day_cont color2">
                     <view class="solar color">1</view>
-                    <view class="lunar color">初一</view>
                 </view>
             </view>
             <view class="day flex"  bindtap="intoPath" data-path="/pages/indexNewCase/indexNewCase">
                 <view class="day_cont color2">
                     <view class="solar">2</view>
-                    <view class="lunar">初二</view>
                 </view>
             </view>
         </view>
