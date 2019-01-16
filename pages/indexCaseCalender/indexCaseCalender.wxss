@@ -149,7 +149,7 @@ page{
 .calendar-detail-day{
     position: absolute;
     margin-left: 80rpx;
-    font-size: 108rpx;
+    font-size: 35rpx;
     font-weight: bold;
     color: #e64340;
 }

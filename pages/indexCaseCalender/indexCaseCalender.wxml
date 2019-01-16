@@ -32,26 +32,29 @@
 </view>-->
 <view class="calendar-root">
     <view class="calendar-navbar">
-        <view class="calendar-navbar-button" bindtap="goToday" hover="true" hover-class="view-hover">今日</view>
-        <view class="calendar-navbar-button" bindtap="goLastMonth" hover="true" hover-class="view-hover">{{"<"}}</view>
-        <view class="calendar-navbar-date">{{web_dateData.date}}</view>
-        <view class="calendar-navbar-button" bindtap="goNextMonth" hover="true" hover-class="view-hover">{{">"}}</view>
-        <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+        <!--<view class="calendar-navbar-button" bindtap="goToday" hover="true" hover-class="view-hover">今日</view>-->
+      
+	        <view class="calendar-navbar-button" bindtap="goLastMonth" hover="true" hover-class="view-hover" style="text-align:right">{{"<"}}</view>
+	        <view class="calendar-navbar-date">{{web_dateData.date}}</view>
+	        <view class="calendar-navbar-button" bindtap="goNextMonth" hover="true" hover-class="view-hover" style="text-align:left">{{">"}}</view>
+     
+        <!--<picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
             <view hover="true" hover-class="view-hover" class="color">跳转</view>
-        </picker> 
+        </picker> -->
     </view>
-    <view class="calendar-head">
+    <view class="calendar-head w690">
         <view wx:for="一二三四五六日" wx:key="*this" class="font34 color2">{{item}}</view>
     </view>
     <view class="calendar-body flex w690">
     	<block wx:for="{{web_dateData.arrInfoEx}}">
     		<view class="calendar-body-item" bindtap="selectDay" data-date="{{item.sYear+'-'+item.sMonth+'-'+item.sDay}}" >
                 <view class="{{item.hasItem>0?'active':''}}">
-    	    		<view class="font32 color3 sDay">{{item.sDay}}</view>
-                    <view class="font20 color6">{{item.lunarDay}}</view>
+    	    		<view class="font32 color3 sDay" style="{{item.isToday?'color:red':''}}">{{item.sDay}}</view>
+                    <view class="font20 color6" style="{{item.isToday?'color:red':''}}">{{item.solarFestival||item.solarTerms?item.solarFestival||item.solarTerms:item.lunarDay}}</view>
                     <view class="font20 color1 {{item.hasItem>0?'caseNumber':''}}">{{item.hasItem>0?item.hasItem:''}}</view>
                 </view>
 	    	</view>
     	</block>
     </view>
+  
 </view>

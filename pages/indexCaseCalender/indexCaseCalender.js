@@ -22,7 +22,13 @@ Page({
 
     onLoad: function() {
         const self = this;
-        self.calenderInit();
+        
+        var todayDate = new Date();
+        self.data.todayMonth = todayDate.getMonth();
+        self.data.todayYear = todayDate.getFullYear();
+        self.data.todayDay = todayDate.getDate();
+         console.log('self.data.todayYear',self.data.todayYear)
+         self.calenderInit();
     },
 
 
@@ -39,6 +45,7 @@ Page({
     //刷新全部数据
     refreshPageData(year, month, day){
         const self = this;
+        console.log('self.data.todayYear',self.data.todayYear)
         self.data.mainData = [];
         self.data.signData = [];
         console.log('refreshPageData',calendarConverter);
@@ -61,6 +68,10 @@ Page({
             var dEx = calendarConverter.solar2lunar(d);
             self.data.dateData.arrInfoEx[i] = dEx;
             self.data.dateData.arrInfoEx[i].hasItem = 0;
+            if(self.data.dateData.arrInfoEx[i].sYear==self.data.todayYear&&self.data.dateData.arrInfoEx[i].sMonth==self.data.todayMonth+1&&self.data.dateData.arrInfoEx[i].sDay==self.data.todayDay){
+                self.data.dateData.arrInfoEx[i].isToday = true;
+                console.log('self.data.todayYear',self.data.todayYear)
+            };
         };
         console.log('self.data.dateData',self.data.dateData);
         self.getMainData();
@@ -104,7 +115,6 @@ Page({
                  }
               }
           };
-          console.log('self.data.dateData',self.data.dateData)
           console.log('self.data.signData',self.data.signData)
           api.checkLoadAll(self.data.isFirstLoadAllStandard,'mainData',self);
           self.setData({
@@ -124,7 +134,6 @@ Page({
         self.data.curMonth = curDate.getMonth();
         self.data.curYear = curDate.getFullYear();
         self.data.curDay= curDate.getDate();
-        this.getMainData();
         self.refreshPageData(self.data.curYear, self.data.curMonth, self.data.curDay);
         this.setData({
             web_dateData: self.data.dateData,
