@@ -65,7 +65,7 @@ page{
     justify-content: center;
     align-items: center;
     background: #fff;
-    height: 70rpx;
+    height: 90rpx;
 }
 .calendar-navbar-button{
     flex-grow: 1;
@@ -89,9 +89,8 @@ page{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50rpx;
+    height: 80rpx;
     background: #fff;
-    font-size: 35rpx;
 }
 .calendar-head view{
     text-align: center;
@@ -100,7 +99,8 @@ page{
 
 .calendar-body{
     margin-top: 10rpx;
-    background: #f1f1f1;
+    background: #fff;
+    padding:30rpx 4%;
 }
 .calendar-body-rows{
     display: flex;
@@ -186,4 +186,47 @@ page{
 
 .view-hover{
     background:#eee;
+}
+/**********日历修改样式*********/
+.calendar-body-item{
+    width:14.28%;
+    height:80rpx;
+    text-align: center;
+    margin:10rpx 0;
+}
+.calendar-body{
+    flex-wrap:wrap;
+}
+.font20{
+    font-size:20rpx;
+}
+.active{
+    width:80rpx;
+    height:80rpx;
+    margin:0 auto; 
+    box-sizing:border-box;
+    border-radius:50%;
+    border:solid 1px #3e9dff;
+    color:#3e9dff;
+    
+}
+.origin{
+   width:80rpx;
+    height:80rpx;
+    margin:0 auto; 
+}
+.caseNumber{
+    width:30rpx;
+    height:30rpx;
+    border-radius:50%;
+    text-align: center;
+    line-height:30rpx;
+    background: #3e9dff;
+    position:absolute;
+    right:0rpx;
+    top:0rpx;
+}
+.sDay{
+    height:40rpx;
+    line-height:40rpx;
 }

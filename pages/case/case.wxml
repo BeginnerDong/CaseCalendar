@@ -13,45 +13,47 @@
 </view>
 
 <block wx:for="{{web_mainData}}" wx:key="id">
-  <view  bindtap="intoPath" data-path="/pages/caseDetail/caseDetail?id={{item.id}}">
-    <view class="w690 flexRowBetween meeting_info">
-      <view class="font26 color6 case_left">
-        原告
+  <view  bindtap="intoPath" data-path="/pages/caseDetail/caseDetail?id={{item.id}}" style="margin-top:14rpx;">
+    <view style="padding:20rpx 0;" class="bg1">
+      <view class="w690 flexRowBetween meeting_info bg1">
+        <view class="font26 color6 case_left">
+          原告
+        </view>
+        <view class="font26 color2 case_right">
+          {{item.plaintiff}}
+        </view>
       </view>
-      <view class="font26 color2 case_right">
-        {{item.plaintiff}}
+      <view class="w690 bg1 flexRowBetween meeting_info">
+        <view class="font28 color6">
+          被告人
+        </view>
+        <view class="font26 color2 case_right">
+          {{item.defendant}}
+        </view>
       </view>
-    </view>
-    <view class="w690 bg1 flexRowBetween meeting_info">
-      <view class="font28 color6">
-        被告人
+      <view class="w690 bg1 flexRowBetween meeting_info">
+        <view class="font26 color6 case_left">
+          案由
+        </view>
+        <view class="font26 color2 case_right">
+          {{item.description}}
+        </view>
       </view>
-      <view class="font26 color2 case_right">
-        {{item.defendant}}
+      <view class="w690 bg1 flexRowBetween meeting_info">
+        <view class="font26 color6 case_left">
+          诉讼标的
+        </view>
+        <view class="font26 color2 case_right">
+          {{item.keywords}}
+        </view>
       </view>
-    </view>
-    <view class="w690 bg1 flexRowBetween meeting_info">
-      <view class="font26 color6 case_left">
-        案由
-      </view>
-      <view class="font26 color2 case_right">
-        {{item.description}}
-      </view>
-    </view>
-    <view class="w690 bg1 flexRowBetween meeting_info">
-      <view class="font26 color6 case_left">
-        诉讼标的
-      </view>
-      <view class="font26 color2 case_right">
-        {{item.keywords}}
-      </view>
-    </view>
-    <view class="w690 bg1 flexRowBetween meeting_info">
-      <view class="font26 color6 case_left">
-        开庭时间
-      </view>
-      <view class="font26 color2 case_right">
-        {{func.timestampToTime(item.open_time)}}
+      <view class="w690 bg1 flexRowBetween meeting_info">
+        <view class="font26 color6 case_left">
+          开庭时间
+        </view>
+        <view class="font26 color2 case_right">
+          {{func.timestampToTime(item.open_time)}}
+        </view>
       </view>
     </view>
   </view>

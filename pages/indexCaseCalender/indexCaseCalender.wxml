@@ -37,22 +37,21 @@
         <view class="calendar-navbar-date">{{web_dateData.date}}</view>
         <view class="calendar-navbar-button" bindtap="goNextMonth" hover="true" hover-class="view-hover">{{">"}}</view>
         <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
-            <view hover="true" hover-class="view-hover">跳转</view>
+            <view hover="true" hover-class="view-hover" class="color">跳转</view>
         </picker> 
     </view>
     <view class="calendar-head">
-        <view wx:for="一二三四五六日" wx:key="*this">{{item}}</view>
+        <view wx:for="一二三四五六日" wx:key="*this" class="font34 color2">{{item}}</view>
     </view>
-    <view class="calendar-body">
+    <view class="calendar-body flex w690">
     	<block wx:for="{{web_dateData.arrInfoEx}}">
-    		<view class="calendar-body-item" bindtap="selectDay" data-date="{{item.sYear+'-'+item.sMonth+'-'+item.sDay}}">
-	    		{{item.sDay}}{{item.lunarDay}}{{item.hasItem>0?'有任务':''}}{{item.hasItem>0?item.hasItem:''}}
+    		<view class="calendar-body-item" bindtap="selectDay" data-date="{{item.sYear+'-'+item.sMonth+'-'+item.sDay}}" >
+                <view class="{{item.hasItem>0?'active':''}}">
+    	    		<view class="font32 color3 sDay">{{item.sDay}}</view>
+                    <view class="font20 color6">{{item.lunarDay}}</view>
+                    <view class="font20 color1 {{item.hasItem>0?'caseNumber':''}}">{{item.hasItem>0?item.hasItem:''}}</view>
+                </view>
 	    	</view>
     	</block>
-    </view>
-    <view class="calendar-detail">
-        <view class="calendar-detail-day">{{detailData.curDay}}</view>
-        <view class="calendar-detail-info1">{{detailData.curInfo1}}</view>
-        <view class="calendar-detail-info2">{{detailData.curInfo2}}</view>
     </view>
 </view>

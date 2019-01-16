@@ -103,19 +103,19 @@
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before">开庭地点</view>
-        <input data-key="location" bindblur="changeBind"  value="{{web_submitData.location}}"></input>
+        <input data-key="location" bindblur="changeBind" class="font28 color2"  value="{{web_submitData.location}}"></input>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before" >争议焦点</view>
-        <input data-key="dispute" bindblur="changeBind"  value="{{web_submitData.dispute}}"></input>
+        <input data-key="dispute" bindblur="changeBind" class="font28 color2" value="{{web_submitData.dispute}}"></input>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before" style="width:30%">需要查明问题</view>
-        <input data-key="question" bindblur="changeBind"  value="{{web_submitData.question}}"></input>
+        <input data-key="question" bindblur="changeBind" class="font28 color2"  value="{{web_submitData.question}}"></input>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info" bindtap="show">
@@ -128,25 +128,25 @@
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
           <view class="input_before" >法庭组成员</view>
-          <input data-key="court_staff" bindblur="changeBind"  value="{{web_submitData.court_staff}}"></input>
+          <input data-key="court_staff" bindblur="changeBind" class="font28 color2" value="{{web_submitData.court_staff}}"></input>
         </view>
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
           <view class="input_before" style="width:45%">是否已通知原被告</view>
-          <input data-key="isnotice" bindblur="changeBind"  value="{{web_submitData.isnotice}}"></input>
+          <input data-key="isnotice" bindblur="changeBind" class="font28 color2"  value="{{web_submitData.isnotice}}"></input>
         </view>
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
           <view class="input_before">办案法规</view>
-          <input data-key="law" bindblur="changeBind"  value="{{web_submitData.law}}"></input>
+          <input data-key="law" bindblur="changeBind" class="font28 color2" value="{{web_submitData.law}}"></input>
         </view>
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
           <view class="input_before">适用程序</view>
-          <input data-key="program" bindblur="changeBind"  value="{{web_submitData.program}}"></input>
+          <input data-key="program" bindblur="changeBind" class="font28 color2" value="{{web_submitData.program}}"></input>
         </view>
       </view>
     </view>

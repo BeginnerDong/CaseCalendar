@@ -32,7 +32,7 @@
     </view>
     <view class="w690 bg1 flexRowBetween meeting_info">
       <view class="case_left">
-        <text class="font28 color6">第三人</text>
+        <text class="font28 color6" style="margin-right:38rpx;">第三人</text>
         <text class="font26 color2">{{web_mainData.third_person}}</text>
       </view>
       <view class="case_left">
@@ -90,7 +90,7 @@
       </view>
     </view>
     <view class="w690  flex" style="border-bottom:solid 1px #eee;padding-top:20rpx;padding-bottom:20rpx;">
-      <view class="case_row flex1">
+      <view class="case_row flex1" style="width:100%;">
         <view class="font26 color6" style="width:30%;">法庭组成人员</view>
         <view class="font26 color2" style="width:70%;">{{web_mainData.court_staff}}</view>
       </view>
