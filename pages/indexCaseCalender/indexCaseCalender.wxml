@@ -1,4 +1,5 @@
-<view class="w690">
+<wxs module="func" src="../../utils/func.wxs" />
+<!--<view class="w690">
     <view class="calender_tit font30 color2">
         选择时间
     </view>
@@ -27,5 +28,31 @@
                 </view>
             </view>
         </view>
+    </view>
+</view>-->
+<view class="calendar-root">
+    <view class="calendar-navbar">
+        <view class="calendar-navbar-button" bindtap="goToday" hover="true" hover-class="view-hover">今日</view>
+        <view class="calendar-navbar-button" bindtap="goLastMonth" hover="true" hover-class="view-hover">{{"<"}}</view>
+        <view class="calendar-navbar-date">{{web_dateData.date}}</view>
+        <view class="calendar-navbar-button" bindtap="goNextMonth" hover="true" hover-class="view-hover">{{">"}}</view>
+        <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+            <view hover="true" hover-class="view-hover">跳转</view>
+        </picker> 
+    </view>
+    <view class="calendar-head">
+        <view wx:for="一二三四五六日" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="calendar-body">
+    	<block wx:for="{{web_dateData.arrInfoEx}}">
+    		<view class="calendar-body-item" bindtap="selectDay" data-date="{{item.sYear+'-'+item.sMonth+'-'+item.sDay}}">
+	    		{{item.sDay}}{{item.lunarDay}}{{item.hasItem>0?'有任务':''}}{{item.hasItem>0?item.hasItem:''}}
+	    	</view>
+    	</block>
+    </view>
+    <view class="calendar-detail">
+        <view class="calendar-detail-day">{{detailData.curDay}}</view>
+        <view class="calendar-detail-info1">{{detailData.curInfo1}}</view>
+        <view class="calendar-detail-info2">{{detailData.curInfo2}}</view>
     </view>
 </view>

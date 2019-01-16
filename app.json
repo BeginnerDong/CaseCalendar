@@ -3,18 +3,17 @@
     "pages/index/index",
     "pages/case/case",
     "pages/user/user",
-    "pages/userCase/userCase",
     "pages/caseDetail/caseDetail",
     "pages/userIntroduce/userIntroduce",
     "pages/indexCaseCalender/indexCaseCalender",
-    "pages/indexNewCase/indexNewCase",
     "pages/newCase/newCase",
     "pages/indexDetail/indexDetail",
     "pages/caseRemind/caseRemind",
     "pages/caseRemindDetail/caseRemindDetail",
-    "pages/userPoster/userPoster"
-
+    "pages/userPoster/userPoster",
+    "pages/indexNewCase/indexNewCase"
   ],
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3e9dff",

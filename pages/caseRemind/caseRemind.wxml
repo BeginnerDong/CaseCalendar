@@ -1,18 +1,21 @@
-<view class="remind flex" bindtap="intoPath" data-path="/pages/caseRemindDetail/caseRemindDetail">
-	<view class="w690">
-		<view class="remind_cont flex">
-			<view class="remind_left">
-				<view class="user_img">
-                  <open-data type="userAvatarUrl"></open-data>
-                </view>
-			</view>
-			<view class="remind_right">
-				<view class="remind_top flexRowBetween">
-					<view class="font28 color2">官方消息</view>
-					<view class="font24 color9">3分钟前</view>
+<wxs module="func" src="../../utils/func.wxs" />
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="remind flex" bindtap="intoPath" data-path="/pages/caseRemindDetail/caseRemindDetail">
+		<view class="w690">
+			<view class="remind_cont flex">
+				<view class="remind_left">
+					<view class="user_img">
+	                  <image src="/images/img2@2x.png" class="user_img"></image>
+	                </view>
 				</view>
-				<view class="remind_bottom font26 color6  avoidOverflow">更新版本了！添加了部分优化功能，供了！添加了部分了！添加了部分了！添加了部分了！添加了部分了！添加了部分</view>
+				<view class="remind_right">
+					<view class="remind_top flexRowBetween">
+						<view class="font28 color2">{{item.title}}</view>
+						<view class="font24 color9">{{item.create_time}}</view>
+					</view>
+					<view class="remind_bottom font26 color6  avoidOverflow">{{item.result}}</view>
+				</view>
 			</view>
 		</view>
 	</view>
-</view>
+</block>

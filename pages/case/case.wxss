@@ -58,3 +58,33 @@ page{
 	padding:30rpx 0;
 	margin-bottom:30rpx;
 }
+
+.empty{
+	width:100%;
+	height:100vh;
+	line-height:100%;
+	overflow:hidden;
+}
+.empty_cont{
+	position:absolute;
+	left:0;
+	top:30%;
+	width:100%;
+	text-align:center;
+}
+.empty_cont image{
+	width:330rpx;
+	height:260rpx;
+	margin:0 auto;
+}
+.add{
+	width:200rpx;
+	height:60rpx;
+	text-align: center;
+	line-height:60rpx;
+	font-size:30rpx;
+	border-radius:0;
+	margin:50rpx auto 0 auto;
+	background:#3e9dff;
+	color:#fff;
+}

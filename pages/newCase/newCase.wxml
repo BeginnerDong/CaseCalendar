@@ -12,28 +12,38 @@
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_left flex">
         <view class="input_before">原告</view>
-        <view class="case_input"><input></input></view>
+        <view class="case_input"><input data-key="plaintiff" bindblur="changeBind"  value="{{web_submitData.plaintiff}}"></input></view>
       </view>
       <view class="case_right flex">
         <view class="input_before">委托代理人</view>
-        <view class="case_input"><input></input></view>
+        <view class="case_input"><input data-key="plaintiff_agent" bindblur="changeBind"  value="{{web_submitData.plaintiff_agent}}"></input></view>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_left flex">
         <view class="input_before">被告</view>
-        <view class="case_input"><input></input></view>
+        <view class="case_input"><input data-key="defendant" bindblur="changeBind"  value="{{web_submitData.defendant}}"></input></view>
       </view>
       <view class="case_right flex">
         <view class="input_before">委托代理人</view>
-        <view class="case_input"><input></input></view>
+        <view class="case_input"><input data-key="defendant_agent" bindblur="changeBind"  value="{{web_submitData.defendant_agent}}"></input></view>
+      </view>
+    </view>
+    <view class="w690 flexRowBetween meeting_info">
+      <view class="case_left flex">
+        <view class="input_before">第三人</view>
+        <view class="case_input"><input data-key="third_person" bindblur="changeBind"  value="{{web_submitData.third_person}}"></input></view>
+      </view>
+      <view class="case_right flex">
+        <view class="input_before">委托代理人</view>
+        <view class="case_input"><input data-key="third_person_agent" bindblur="changeBind"  value="{{web_submitData.third_person_agent}}"></input></view>
       </view>
     </view>
     <view class="w690 flexRowBetween border_b">
       <view class="case_row flex1">
         <view class="input_before">案由</view>
         <view class="textarea">
-            <textarea height="auto"  placeholder="案由">
+            <textarea height="auto"  placeholder="案由" data-key="description" bindblur="changeBind"  value="{{web_submitData.description}}">
             </textarea>
         </view>
       </view>
@@ -42,7 +52,7 @@
       <view class="case_row flex1">
         <view class="input_before">诉讼标的</view>
         <view class="textarea">
-            <textarea height="auto" placeholder="诉讼标的">
+            <textarea height="auto" placeholder="诉讼标的" data-key="keywords" bindblur="changeBind"  value="{{web_submitData.keywords}}">
               
             </textarea>
         </view>
@@ -52,17 +62,17 @@
       <view class="case_row_input flex">
         <view class="input_before">开庭时间</view>
            <view class="input1">
-          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01"bindchange="bindDateChange">
+          <picker mode="date" value="{{date}}" start="2019-01-12" end="2050-09-01" bindchange="changeOpenDate">
             <view class="flex picker_in">
-              <view class="picker">{{date}}</view>
+              <view class="picker">{{web_openDate}}</view>
               <view class="down flex"><image src="/images/down.png"></image></view>
             </view>
           </picker>
         </view>
         <view class="input1">
-          <picker mode="time" value="{{time}}"  start="09:01"  end="21:01"  bindchange="bindTimeChange">
+          <picker mode="time" value="{{time}}"  start="00:00"  end="24:00"  bindchange="changeOpenTime">
             <view class="flex picker_in">
-              <view class="picker">{{time}}</view>
+              <view class="picker">{{web_openTime}}</view>
               <view class="down flex"><image src="/images/down.png"></image></view>
             </view>
           </picker>
@@ -73,17 +83,17 @@
       <view class="case_row_input flex">
         <view class="input_before">调节时间</view>
         <view class="input1">
-          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01"bindchange="bindDateChange">
+          <picker mode="date" value="{{date}}" start="2019-01-12" end="2050-09-01" bindchange="changeMediateDate">
             <view class="flex picker_in">
-              <view class="picker">{{date}}</view>
+              <view class="picker">{{web_mediateDate}}</view>
               <view class="down flex"><image src="/images/down.png"></image></view>
             </view>
           </picker>
         </view>
         <view class="input1">
-          <picker mode="time" value="{{time}}"  start="09:01"  end="21:01"  bindchange="bindTimeChange">
+          <picker mode="time" value="{{time}}"  start="00:00"  end="24:00"  bindchange="changeMediateTime">
             <view class="flex picker_in">
-              <view class="picker">{{time}}</view>
+              <view class="picker">{{web_mediateTime}}</view>
               <view class="down flex"><image src="/images/down.png"></image></view>
             </view>
           </picker>
@@ -93,19 +103,19 @@
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before">开庭地点</view>
-        <input></input>
+        <input data-key="location" bindblur="changeBind"  value="{{web_submitData.location}}"></input>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
-        <view class="input_before">争议地点</view>
-        <input></input>
+        <view class="input_before" >争议焦点</view>
+        <input data-key="dispute" bindblur="changeBind"  value="{{web_submitData.dispute}}"></input>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before" style="width:30%">需要查明问题</view>
-        <input></input>
+        <input data-key="question" bindblur="changeBind"  value="{{web_submitData.question}}"></input>
       </view>
     </view>
     <view class="w690 flexRowBetween meeting_info" bindtap="show">
@@ -117,26 +127,26 @@
     <view class="folding" wx:if="{{is_show}}">
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
-          <view class="input_before">法庭组成员</view>
-          <input></input>
+          <view class="input_before" >法庭组成员</view>
+          <input data-key="court_staff" bindblur="changeBind"  value="{{web_submitData.court_staff}}"></input>
         </view>
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
           <view class="input_before" style="width:45%">是否已通知原被告</view>
-          <input></input>
+          <input data-key="isnotice" bindblur="changeBind"  value="{{web_submitData.isnotice}}"></input>
         </view>
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
           <view class="input_before">办案法规</view>
-          <input></input>
+          <input data-key="law" bindblur="changeBind"  value="{{web_submitData.law}}"></input>
         </view>
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
-          <view class="input_before">使用程序</view>
-          <input></input>
+          <view class="input_before">适用程序</view>
+          <input data-key="program" bindblur="changeBind"  value="{{web_submitData.program}}"></input>
         </view>
       </view>
     </view>
@@ -154,22 +164,23 @@
       <view class="case_row_input flex">
         <view class="input_before"  style="width:30%;">提醒时间设置</view>
         <view class="input1">
-          <picker mode="date" value="{{noticeDate}}" start="2015-09-01" end="2222-09-01"
-            bindchange="bindNoticeDate"
+          <picker mode="date" value="{{noticeDate}}" start="2019-01-12" end="2050-09-01" 
+            bindchange="changeNoticeDate"
           >
-            <view class="picker">{{noticeDate}}</view>
+            <view class="picker">{{web_noticeDate}}</view>
           </picker>
         </view>
         <view class="input1">
-          <picker mode="time" value="{{timeTwo}}"  start="09:01"  end="21:01"  bindchange="bindtimeTwo">
+          <picker mode="time" value="{{timeTwo}}"  start="00:00"  end="24:00"  bindchange="changeNoticeTime">
             <view class="flex picker_in">
-              <view class="picker">{{timeTwo}}</view>
+              <view class="picker">{{web_noticeTime}}</view>
               <view class="down flex"><image src="/images/down.png"></image></view>
             </view>
           </picker>
         </view>
       </view>
     </view>
+
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before" style="width:30%;">提醒方式</view>
@@ -199,7 +210,7 @@
   </view>
 </view>
 <form>
-  <button class="submit_info">
+  <button class="submit_info" open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}">
     提交
   </button>
 </form>
