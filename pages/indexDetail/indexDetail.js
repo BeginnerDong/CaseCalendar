@@ -7,14 +7,24 @@ const token = new Token();
 Page({
   data: {
  
-   isFirstLoadAllStandard:['getMainData'],
+ 
+  	mainData:[],
+    isFirstLoadAllStandard:['getMainData'],
   },
 
   onLoad(options){
     const self = this;
-    api.commonInit(self);
-    self.data.id= options.id;
-    self.getMainData();
+    //api.commonInit(self);
+    //self.data.id= options.id;
+    //self.getMainData();
+    self.data.mainData = api.getStorageArray('mainData');
+    self.data.index = options.index;
+    console.log('self.data.index',self.data.index)
+    console.log('self.data.mainData',self.data.mainData)
+    
+    self.setData({	
+    	web_url:self.data.mainData[0][self.data.index].passage2
+    })
   },
 
   getMainData(){

@@ -50,6 +50,7 @@ Page({
       console.log(1000,res);
       if(res.info.data.length>0){
         self.data.sliderData.push.apply(self.data.sliderData,res.info.data);
+
       }
       self.setData({
         web_sliderData:self.data.sliderData,
@@ -80,6 +81,7 @@ Page({
     const callback =(res)=>{
       if(res.info.data.length>0){
         self.data.mainData.push.apply(self.data.mainData,res.info.data);
+        api.setStorageArray('mainData',self.data.mainData,'id',999);
       }else{
         self.data.isLoadAll = true;
         api.showToast('没有更多了','fail');

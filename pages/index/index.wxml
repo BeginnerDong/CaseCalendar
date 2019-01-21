@@ -26,13 +26,13 @@
 </view>
 <view class="w690">
     <block wx:for="{{web_mainData}}" wx:key="id">
-        <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/indexDetail/indexDetail?id={{item.id}}">
+        <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/indexDetail/indexDetail?index={{index}}">
             <view class="product_box flexRowBetween w710">
                 <view class="product_right flexRowBetween">
                     <view class="product_detail">
                         <view class="font30 product_title color2 avoidOverflow">{{item.title}}</view>
                         <view class="font26 color6 product_cont avoidOverflow2">
-                          {{item.description}}
+                          {{item.passage2}}
                         </view>
                         <view class="product_time font24 color2">{{item.description}}</view>
                     </view>

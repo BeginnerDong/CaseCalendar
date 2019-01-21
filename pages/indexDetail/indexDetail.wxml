@@ -1,8 +1,10 @@
-<view class="w690">
+<!--<view class="w690">
 	<view class="font28 color6">
 		<view class="content ql-editor" >
             <import src="../../wxParse/wxParse.wxml"/>
             <template is="wxParse" data="{{wxParseData:web_mainData.content}}"/>
          </view> 
 	</view>
-</view>
+</view>-->
+
+<web-view src="{{web_url}}"></web-view>
