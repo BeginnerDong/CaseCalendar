@@ -13,10 +13,10 @@
 </view>
 
 <block wx:for="{{web_mainData}}" wx:key="id">
-  <view  bindtap="intoPath" data-path="/pages/caseDetail/caseDetail?id={{item.id}}" style="margin-top:14rpx;">
+  <view  bindtap="intoPath" data-path="/pages/newCase/newCase?id={{item.id}}" style="margin-top:14rpx;">
     <view style="padding:20rpx 0;" class="bg1">
       <view class="w690 flexRowBetween meeting_info bg1">
-        <view class="font26 color6 case_left">
+        <view class="font26 color6 case_left" >
           原告
         </view>
         <view class="font26 color2 case_right">
@@ -57,6 +57,7 @@
       </view>
     </view>
   </view>
+  <view bindtap="messageDelete" data-index="{{index}}">删除</view>
 </block>
 
 

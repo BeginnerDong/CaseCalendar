@@ -163,54 +163,32 @@
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before"  style="width:30%;">提醒时间设置</view>
-        <view class="input1">
-          <picker mode="date" value="{{noticeDate}}" start="2019-01-12" end="2050-09-01" 
-            bindchange="changeNoticeDate"
-          >
-            <view class="picker">{{web_noticeDate}}</view>
-          </picker>
-        </view>
-        <view class="input1">
-          <picker mode="time" value="{{timeTwo}}"  start="00:00"  end="24:00"  bindchange="changeNoticeTime">
-            <view class="flex picker_in">
-              <view class="picker">{{web_noticeTime}}</view>
-              <view class="down flex"><image src="/images/down.png"></image></view>
-            </view>
-          </picker>
+
+          <view >
+            <checkbox-group bindchange="checkboxChange" style="display:flex">
+              <label class="checkbox" wx:for="{{items}}">
+             
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"  disabled="true" wx:if="{{web_submitData.open_time&&web_submitData.open_time-item.value<web_todayTime}}" />
+                
+                <checkbox value="{{item.value}}" checked="{{item.checked}}"  wx:else />
+
+                {{item.name}}
+              </label>
+            </checkbox-group>
+          </view>
+
         </view>
       </view>
     </view>
 
-    <!--<view class="w690 flexRowBetween meeting_info">
-      <view class="case_row_input flex">
-        <view class="input_before" style="width:30%;">提醒方式</view>
-        <view class="input">
-          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-            <view class="flex picker_in">
-              <view class="picker">{{array[index]}}</view>
-              <view class="down flex"><image src="/images/down.png"></image></view>
-            </view>
-          </picker>
-        </view>
-      </view>
-    </view>
-   <view class="w690 flexRowBetween meeting_info">
-      <view class="case_row_input flex">
-        <view class="input_before" style="width:30%;">提醒时长</view>
-        <view class="input">
-            <picker bindchange="bindChooseDate" value="{{current}}" range="{{dateArray}}">
-              <view class="flex picker_in">
-                <view class="picker">{{dateArray[current]}}</view>
-                 <view class="down flex"><image src="/images/down.png"></image></view>
-              </view>
-            </picker>
-        </view>
-      </view>
-    </view>-->
-  </view>
 </view>
 <form bindsubmit="formIdAdd" report-submit="true">
   <button class="submit_info" open-type="getUserInfo"  bindgetuserinfo="{{web_buttonCanClick?'submit':''}}"  form-type="submit">
     提交
   </button>
 </form>
+<view class="share" wx:if="{{web_mainData}}">
+  <button open-type="share">
+    <image src="/images/icon@2x.png"></image>
+  </button>
+</view>

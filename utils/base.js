@@ -838,6 +838,41 @@ class Base{
         return format;
     }
 
+     timestampToYMD(timestamp) {
+    
+    timestamp = parseInt(timestamp);
+    var time = new Date(timestamp);
+ 
+    var format = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
+
+
+
+    return format;
+
+}
+
+ timestampToMh(timestamp) {
+    
+    timestamp = parseInt(timestamp);
+    var time = new Date(timestamp);
+ 
+  
+
+    if(time.getHours()<10){
+        var format = '0' + time.getHours();
+    }else{
+        var format = format +  time.getHours();
+    }
+    if(time.getMinutes()<10){
+        var format = format + ':' + '0' + time.getMinutes();
+    }else{
+        var format = format + ':' + time.getMinutes();
+    }
+
+    return format;
+
+}
+
     getDateDiff(dateTimeStamp) {
         var minute = 1000 * 60;
         var hour = minute * 60;

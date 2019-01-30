@@ -38,6 +38,9 @@ Page({
     postData.paginate = api.cloneForm(self.data.paginate);
     postData.searchItem = api.cloneForm(self.data.searchItem);
     postData.searchItem.thirdapp_id = getApp().globalData.thirdapp_id;
+    postData.order = {
+      open_time:'desc'
+    };
     const callback =(res)=>{
       if(res.info.data.length>0){
         self.data.mainData.push.apply(self.data.mainData,res.info.data);
@@ -52,6 +55,28 @@ Page({
       });
     };
     api.messageGet(postData,callback);
+  },
+
+  messageDelete(e){
+    const  self =this;
+    var index = api.getDataSet(e,'index');
+    const postData={};
+    postData.tokenFuncName = 'getProjectToken';
+    postData.searchItem={
+      id:self.data.mainData[index].id
+    };
+    postData.data= {
+      status:-1
+    };
+    const callback =(res)=>{
+      if(res.solely_code==100000){
+        api.showToast('删除成功','none')
+      }else{
+        api.showToast(res.msg,'none')
+      };
+      self.getMainData(true)
+    };
+    api.messageDelete(postData,callback);
   },
 
 

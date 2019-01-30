@@ -55,9 +55,14 @@ Page({
         self.data.curYear = year;
         self.data.curDay = day;
         self.getOffset(self.data.curYear,self.data.curMonth);
+        self.data.dateData = {
+            date: "",                
+            arrInfoEx: [],           
+        };
         self.data.dateData.date = self.data.curYear + '年'+ (self.data.curMonth + 1) + '月';
         self.data.monthArray = [new Date(self.data.curYear, self.data.curMonth, 1).getTime(),new Date(self.data.curYear, self.data.curMonth+1, 1).getTime()]
         var offset = self.getOffset(self.data.curYear, self.data.curMonth);
+        console.log('offset',offset);
         for (var i = 0; i < offset; ++i){
             self.data.dateData.arrInfoEx[i] = {isEmpty:true};
         };
