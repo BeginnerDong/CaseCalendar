@@ -160,24 +160,22 @@
     </view>
   </view>
   <view class="case_list bg1">
-    <view class="w690 flexRowBetween meeting_info">
-      <view class="case_row_input flex">
+    <view class="w690 flexRowBetween">
+      <view class="case_row_input">
         <view class="input_before"  style="width:30%;">提醒时间设置</view>
 
-          <view >
-            <checkbox-group bindchange="checkboxChange" style="display:flex">
-              <label class="checkbox" wx:for="{{items}}">
+       
+            <checkbox-group bindchange="checkboxChange" style="flex-wrap:wrap;" class="flex">
+              <label class="checkbox flex" wx:for="{{items}}">
              
-                <checkbox value="{{item.value}}" checked="{{item.checked}}"  disabled="true" wx:if="{{web_submitData.open_time&&web_submitData.open_time-item.value<web_todayTime}}" />
+                <checkbox style="width:30rpx;height:30rpx;" value="{{item.value}}" checked="{{item.checked}}"  disabled="true" wx:if="{{web_submitData.open_time&&web_submitData.open_time-item.value<web_todayTime}}" />
                 
                 <checkbox value="{{item.value}}" checked="{{item.checked}}"  wx:else />
 
-                {{item.name}}
+                <view class="select_item">{{item.name}}</view>
               </label>
             </checkbox-group>
           </view>
-
-        </view>
       </view>
     </view>
 

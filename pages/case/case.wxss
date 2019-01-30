@@ -88,3 +88,12 @@ page{
 	background:#3e9dff;
 	color:#fff;
 }
+.delete{
+	position: absolute;
+	right:20rpx;
+	top:20rpx;
+}
+.delete image{
+	width:40rpx;
+	height:40rpx;
+}

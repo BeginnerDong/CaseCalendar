@@ -103,7 +103,6 @@ page{
 }
 .case_row_input{
 	width:100%;
-	height:50rpx;
 }
 .case_row_input .input_before{
 	width:22%;
@@ -177,4 +176,16 @@ picker{
 .down image{
 	width:16rpx;
 	height:14rpx;
+}
+checkbox{
+	width:30rpx;
+	height:30rpx;
+	margin:20rpx;
+}
+label{
+	width:33.33%;
+}
+.select_item{
+	margin-left:20rpx;
+	font-size:26rpx;
 }
