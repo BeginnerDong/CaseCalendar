@@ -12,7 +12,7 @@
 </view>
 <view class="menu  w690 font30 color6 shadow1" >
     <view class="w690 flexRowBetween bg1 menu_cont" bindtap="intoPath" data-path="/pages/indexCaseCalender/indexCaseCalender">
-        <view class="color3" style="font-size:36rpx;">新建案例</view>
+        <view class="color3" style="font-size:36rpx;">新建案件</view>
         <image src="/images/comment.png"></image>
     </view>
 </view>
@@ -28,17 +28,15 @@
     <block wx:for="{{web_mainData}}" wx:key="id">
         <view class="product flexRowBetween bg1 shadow1" bindtap="intoPath" data-path="/pages/indexDetail/indexDetail?index={{index}}">
             <view class="product_box flexRowBetween w710">
-                <view class="product_right flexRowBetween">
+                <view class="product_right flex">
                     <view class="product_detail">
                         <view class="font30 product_title color2 avoidOverflow">{{item.title}}</view>
-                        <view class="font26 color6 product_cont avoidOverflow2">
-                          {{item.passage2}}
-                        </view>
-                        <view class="product_time font24 color2">{{item.description}}</view>
+                        
+                        <view class="product_time font24 color2">{{item.create_time}}</view>
                     </view>
                 </view>
                 <view class="product_left">
-                    <image src="/images/index1.png"></image>
+                    <image src="{{item.mainImg[0].url}}"></image>
                 </view>
             </view>
         </view>

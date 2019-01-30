@@ -16,7 +16,7 @@ class Base{
     request(params) {
         var that = this;
         getApp().globalData.buttonClick = true;
-        var baseRestUrl = 'http://bananrili.bj01.bdysite.com/api/public/index.php/api/v1/';
+        var baseRestUrl = 'https://www.fajiangzhijia.com/api/public/index.php/api/v1/';
         var url=baseRestUrl + params.url;
         const callback = (res)=>{
             that.request(params);
@@ -86,7 +86,7 @@ class Base{
             };
         };
         wx.uploadFile({
-            url: 'http://www.waiguoplus.com/api/public/index.php/api/v1/Base/FtpFile/upload',
+            url: 'https://www.fajiangzhijia.com/api/public/index.php/api/v1/Base/FtpFile/upload',
             filePath:filePath,
             name:name,
             formData:formData,

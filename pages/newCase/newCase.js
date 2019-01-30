@@ -75,8 +75,9 @@ Page({
       };
      api.getAuthSetting(callback)
    }else{
+      api.buttonCanClick(self,true) 
       api.showToast('请补全信息','none')
-      api.buttonCanClick(self,true)     
+          
    };
   },
 
@@ -92,14 +93,31 @@ Page({
     const callback = (data)=>{
       if(data.solely_code==100000){
         //api.delStorageArray('submitData')
-        api.showToast('添加成功','none',1000,function(){
-          setTimeout(function(){
-            wx.navigateBack({
-              delta:1
-            }) 
-          },1000);  
+        api.showToast('添加成功','none')
+        self.data.submitData ={
+          plaintiff:'',//原告
+          plaintiff_agent:'',
+          defendant:'',
+          defendant_agent:'',
+          third_person:'',
+          third_person_agent:'',
+          description:'',
+          keywords:'',
+          open_time:'',
+          mediate_time:'',
+          location:'',
+          dispute:'',
+          question:'',
+          court_staff:'',
+          law:'',
+          program:'',
+          start_time:'',
+          //end_time:'',
+          isnotice:''
+        }, 
+        self.setData({
+          web_submitData:self.data.submitData
         })
-
       }else{
         api.showToast(data.msg,'none',1000)
       }
@@ -108,6 +126,12 @@ Page({
     api.messageAdd(postData,callback);
   },
 
+  
+
+  formIdAdd(e){
+    console.log(e)
+    api.WxFormIdAdd(e.detail.formId,(new Date()).getTime()/1000+7*86400);   
+  },
 
   changeOpenDate(e){
     const self = this;
@@ -125,12 +149,13 @@ Page({
       self.data.open_time = self.data.openDate+' '+e.detail.value;
       self.data.submitData.open_time = api.timeToTimestamp(self.data.open_time)*1000;
       console.log(self.data.submitData.open_time)
+      self.setData({
+        web_openTime:e.detail.value
+      })
     }else{
       api.showToast('请选择开庭日期','none',1000)
     }
-    self.setData({
-      web_openTime:e.detail.value
-    })
+    
   },
 
   changeMediateDate(e){
@@ -149,12 +174,13 @@ Page({
       self.data.mediate_time = self.data.mediateDate+' '+e.detail.value;
       self.data.submitData.mediate_time = api.timeToTimestamp(self.data.mediate_time)*1000;
       console.log(self.data.submitData.open_time)
+      self.setData({
+        web_mediateTime:e.detail.value
+      })
     }else{
       api.showToast('请选择调节日期','none',1000)
     }
-    self.setData({
-      web_mediateTime:e.detail.value
-    })
+    
     
   },
 
@@ -172,12 +198,13 @@ Page({
     if(self.data.noticeDate){
       self.data.notice_time = self.data.noticeDate+' '+e.detail.value;
       self.data.submitData.start_time = api.timeToTimestamp(self.data.notice_time)*1000;
+      self.setData({
+        web_noticeTime:e.detail.value
+      })
     }else{
       api.showToast('请选择提醒日期','none',1000)
     }
-    self.setData({
-      web_noticeTime:e.detail.value
-    })
+    
     
   },
 

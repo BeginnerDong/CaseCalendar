@@ -81,7 +81,7 @@
     </view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
-        <view class="input_before">调节时间</view>
+        <view class="input_before">调解时间</view>
         <view class="input1">
           <picker mode="date" value="{{date}}" start="2019-01-12" end="2050-09-01" bindchange="changeMediateDate">
             <view class="flex picker_in">
@@ -139,7 +139,7 @@
       </view>
       <view class="w690 flexRowBetween meeting_info">
         <view class="case_row_input flex">
-          <view class="input_before">办案法规</view>
+          <view class="input_before">参考法规</view>
           <input data-key="law" bindblur="changeBind" class="font28 color2" value="{{web_submitData.law}}"></input>
         </view>
       </view>
@@ -181,7 +181,7 @@
       </view>
     </view>
 
-    <view class="w690 flexRowBetween meeting_info">
+    <!--<view class="w690 flexRowBetween meeting_info">
       <view class="case_row_input flex">
         <view class="input_before" style="width:30%;">提醒方式</view>
         <view class="input">
@@ -206,11 +206,11 @@
             </picker>
         </view>
       </view>
-    </view>
+    </view>-->
   </view>
 </view>
-<form>
-  <button class="submit_info" open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}">
+<form bindsubmit="formIdAdd" report-submit="true">
+  <button class="submit_info" open-type="getUserInfo"  bindgetuserinfo="{{web_buttonCanClick?'submit':''}}"  form-type="submit">
     提交
   </button>
 </form>

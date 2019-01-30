@@ -4,15 +4,16 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
-	"appid": "wx4c16a5493b7fff43",
+	"appid": "wx93b710fc1bd80f6e",
 	"projectname": "%E5%8A%9E%E6%A1%88%E6%97%A5%E5%8E%86",
 	"isGameTourist": false,
 	"condition": {
