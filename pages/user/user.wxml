@@ -61,6 +61,8 @@
         </view>
     </view>
 </view>
+<view class="font22 color6 w690" style="position:fixed;left:0;bottom:150rpx;text-align: center;line-height:40rpx;">由于微信权限设置，若七天未进入小程序，
+系统将无法向您按时推送微信案件消息提醒。</view>
 <view class="space_bottom"></view>
 <view class="navbar">
     <view class="navbar_item"  bindtap="intoPathRedirect" data-path="/pages/index/index">
