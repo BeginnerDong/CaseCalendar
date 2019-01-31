@@ -73,6 +73,8 @@
         <view class="font26 color2 avoidOverflow">{{web_mainData.location}}</view>
       </view>
     </view>
-  
   </view>
 </view>
+<button class="submit_info" bindtap="intoPathRedirect" data-path="/pages/index/index">
+  返回首页
+</button>

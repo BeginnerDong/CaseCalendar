@@ -56,7 +56,7 @@
         </view>
       </view>
     </view>
-    <view class="delete" bindtap="messageDelete" data-index="{{index}}">
+    <view class="delete" catchtap="messageDelete" data-index="{{index}}">
       <image src="/images/delete.png"></image>
     </view>
   </view>

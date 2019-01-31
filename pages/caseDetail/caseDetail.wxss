@@ -1,86 +1,116 @@
-page{
-	min-height:100%;
-	width:100%;
-	background:#f4f4f4;
+page {
+    min-height: 100%;
+    width: 100%;
+    background: #f4f4f4;
 }
-.tabs{
-	height:80rpx;
-	border-bottom:solid 1px #e0e0e0;
-}
-.tabs_item{
-	width:33.33%;
-	text-align:center;
-	height:80rpx;
-	line-height:80rpx;
-}
-.tabs_item text{
-	height:78rpx;
-	line-height:78rpx;
-	display:inline-block;
-}
-.tabs_this{
-	color:#3e9dff;
-	border-bottom:solid 1px #3e9dff;
-}
-.notice{
-	width:100%;
 
+.tabs {
+    height: 80rpx;
+    border-bottom: solid 1px #e0e0e0;
 }
-.notice_title{
-	width:100%;
-	height:76rpx;
-	line-height:76rpx;
+
+.tabs_item {
+    width: 33.33%;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
 }
-.notice_title text{
-	margin-right:16rpx;
+
+.tabs_item text {
+    height: 78rpx;
+    line-height: 78rpx;
+    display: inline-block;
 }
-.notice_cont{
-	color:#685958;
-	line-height:36rpx;
+
+.tabs_this {
+    color: #3e9dff;
+    border-bottom: solid 1px #3e9dff;
 }
-.notice_time{
-	height:60rpx;
-	line-height:60rpx;
+
+.notice {
+    width: 100%;
 }
-.notice_time .text1{
-	width:25%;
+
+.notice_title {
+    width: 100%;
+    height: 76rpx;
+    line-height: 76rpx;
 }
-.meeting_info{
-	height:88rpx;
-	border-bottom:solid 1px #eee;
+
+.notice_title text {
+    margin-right: 16rpx;
 }
-.case_left{
-	width:50%;
+
+.notice_cont {
+    color: #685958;
+    line-height: 36rpx;
 }
-.case_left text{
-	margin-right:58rpx;
+
+.notice_time {
+    height: 60rpx;
+    line-height: 60rpx;
 }
-.case_row text{
-	margin-right:30rpx;
+
+.notice_time .text1 {
+    width: 25%;
 }
-.case_right{
-	width:50%;
+
+.meeting_info {
+    height: 88rpx;
+    border-bottom: solid 1px #eee;
 }
-.case_list{
-	padding-bottom:30rpx;
-	margin-bottom:30rpx;
+
+.case_left {
+    width: 50%;
 }
-.user_tilte1{
-	width:70rpx;
+
+.case_left text {
+    margin-right: 58rpx;
 }
-.share{
-	width:60rpx;
-	height:60rpx;
-	position:fixed;
-	right:0;
-	bottom:30%;
+
+.case_row text {
+    margin-right: 30rpx;
 }
-.share image{
-	width:100%;
-	height:100%;
+
+.case_right {
+    width: 50%;
 }
-.share button{
-	width:60rpx;
-	height:60rpx;
-	padding:0;
+
+.case_list {
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.user_tilte1 {
+    width: 70rpx;
+}
+
+.share {
+    width: 60rpx;
+    height: 60rpx;
+    position: fixed;
+    right: 0;
+    bottom: 30%;
+}
+
+.share image {
+    width: 100%;
+    height: 100%;
+}
+
+.share button {
+    width: 60rpx;
+    height: 60rpx;
+    padding: 0;
+}
+
+.submit_info {
+    border-radius: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.button-hover {
+    background: #3e9dff;
 }
