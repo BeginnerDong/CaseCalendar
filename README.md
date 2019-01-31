@@ -52,8 +52,6 @@ label表
 | parentid| int(11) | 父级菜单ID |
 | type | tinyint(2) |  1,menu;2,menu_item; |
 
-
-
 article表
 
 | 字段 | 类型 | 说明 |

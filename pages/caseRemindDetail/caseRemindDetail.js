@@ -1,33 +1,31 @@
-import {Api} from '../../utils/api.js';
+import { Api } from '../../utils/api.js';
 var api = new Api();
 const app = getApp();
-import {Token} from '../../utils/token.js';
+import { Token } from '../../utils/token.js';
 const token = new Token();
 
 Page({
-  data: {
- 
-  },
-  onLoad(options){
+    data: {
 
-  },
- 
-  intoPath(e){
-    const self = this;
-    api.pathTo(api.getDataSet(e,'path'),'nav');
-  },
+    },
+    onLoad(options) {
 
-  intoPathRedi(e){
-    const self = this;
-    wx.navigateBack({
-      delta:1
-    })
-  },
-  intoPathRedirect(e){
-    const self = this;
-    api.pathTo(api.getDataSet(e,'path'),'redi');
-  }, 
- 
+    },
+
+    intoPath(e) {
+        const self = this;
+        api.pathTo(api.getDataSet(e, 'path'), 'nav');
+    },
+
+    intoPathRedi(e) {
+        const self = this;
+        wx.navigateBack({
+            delta: 1
+        })
+    },
+    intoPathRedirect(e) {
+        const self = this;
+        api.pathTo(api.getDataSet(e, 'path'), 'redi');
+    },
+
 })
-
-  

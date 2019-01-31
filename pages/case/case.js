@@ -1,4 +1,6 @@
-import { Api } from '../../utils/api.js';
+import {
+    Api
+} from '../../utils/api.js';
 var api = new Api();
 const app = getApp();
 

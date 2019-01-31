@@ -1,99 +1,117 @@
-page{
-	min-height:100%;
-	width:100%;
-	background:#f4f4f4;
-}
-.tabs{
-	height:80rpx;
-	border-bottom:solid 1px #e0e0e0;
-}
-.tabs_item{
-	width:33.33%;
-	text-align:center;
-	height:80rpx;
-	line-height:80rpx;
-}
-.tabs_item text{
-	height:78rpx;
-	line-height:78rpx;
-	display:inline-block;
-}
-.tabs_this{
-	color:#3e9dff;
-	border-bottom:solid 1px #3e9dff;
-}
-.notice{
-	width:100%;
-
-}
-.notice_title{
-	width:100%;
-	height:76rpx;
-	line-height:76rpx;
-}
-.notice_title text{
-	margin-right:16rpx;
-}
-.notice_cont{
-	color:#685958;
-	line-height:36rpx;
-}
-.notice_time{
-	height:60rpx;
-	line-height:60rpx;
-}
-.notice_time .text1{
-	width:25%;
-}
-.meeting_info{
-	height:60rpx;
-}
-.case_left{
-	width:24%;
-}
-.case_right{
-	width:76%;
-}
-.case_list{
-	padding:30rpx 0;
-	margin-bottom:30rpx;
+page {
+    min-height: 100%;
+    width: 100%;
+    background: #f4f4f4;
 }
 
-.empty{
-	width:100%;
-	height:100vh;
-	line-height:100%;
-	overflow:hidden;
+.tabs {
+    height: 80rpx;
+    border-bottom: solid 1px #e0e0e0;
 }
-.empty_cont{
-	position:absolute;
-	left:0;
-	top:30%;
-	width:100%;
-	text-align:center;
+
+.tabs_item {
+    width: 33.33%;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
 }
-.empty_cont image{
-	width:330rpx;
-	height:260rpx;
-	margin:0 auto;
+
+.tabs_item text {
+    height: 78rpx;
+    line-height: 78rpx;
+    display: inline-block;
 }
-.add{
-	width:200rpx;
-	height:60rpx;
-	text-align: center;
-	line-height:60rpx;
-	font-size:30rpx;
-	border-radius:0;
-	margin:50rpx auto 0 auto;
-	background:#3e9dff;
-	color:#fff;
+
+.tabs_this {
+    color: #3e9dff;
+    border-bottom: solid 1px #3e9dff;
 }
-.delete{
-	position: absolute;
-	right:20rpx;
-	top:20rpx;
+
+.notice {
+    width: 100%;
 }
-.delete image{
-	width:40rpx;
-	height:40rpx;
+
+.notice_title {
+    width: 100%;
+    height: 76rpx;
+    line-height: 76rpx;
+}
+
+.notice_title text {
+    margin-right: 16rpx;
+}
+
+.notice_cont {
+    color: #685958;
+    line-height: 36rpx;
+}
+
+.notice_time {
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.notice_time .text1 {
+    width: 25%;
+}
+
+.meeting_info {
+    height: 60rpx;
+}
+
+.case_left {
+    width: 24%;
+}
+
+.case_right {
+    width: 76%;
+}
+
+.case_list {
+    padding: 30rpx 0;
+    margin-bottom: 30rpx;
+}
+
+.empty {
+    width: 100%;
+    height: 100vh;
+    line-height: 100%;
+    overflow: hidden;
+}
+
+.empty_cont {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.empty_cont image {
+    width: 330rpx;
+    height: 260rpx;
+    margin: 0 auto;
+}
+
+.add {
+    width: 200rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    border-radius: 0;
+    margin: 50rpx auto 0 auto;
+    background: #3e9dff;
+    color: #fff;
+}
+
+.delete {
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+}
+
+.delete image {
+    width: 40rpx;
+    height: 40rpx;
 }
