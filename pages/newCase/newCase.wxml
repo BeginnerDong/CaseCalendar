@@ -19,9 +19,15 @@
         <view class="case_input"><input data-key="plaintiff_agent" bindblur="changeBind"  value="{{web_submitData.plaintiff_agent}}"></input></view>
       </view>
     </view>
+	 <view class="w690 flexRowBetween meeting_info">
+	  <view class="case_left flex" style="width: 100%;">
+	    <view class="input_before" style="width:20%">原告电话</view>
+	    <view class="case_input"><input data-key="plaintiff_phone" bindblur="changeBind"  value="{{web_submitData.plaintiff_phone}}"></input></view>
+	  </view>
+	</view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_left flex">
-        <view class="input_before">被告</view>
+        <view class="input_before" >被告</view>
         <view class="case_input"><input data-key="defendant" bindblur="changeBind"  value="{{web_submitData.defendant}}"></input></view>
       </view>
       <view class="case_right flex">
@@ -29,6 +35,12 @@
         <view class="case_input"><input data-key="defendant_agent" bindblur="changeBind"  value="{{web_submitData.defendant_agent}}"></input></view>
       </view>
     </view>
+	 <view class="w690 flexRowBetween meeting_info">
+	  <view class="case_left flex" style="width: 100%;">
+	    <view class="input_before" style="width:20%">被告电话</view>
+	    <view class="case_input"><input data-key="defendant_phone" bindblur="changeBind"  value="{{web_submitData.defendant_phone}}"></input></view>
+	  </view>
+	</view>
     <view class="w690 flexRowBetween meeting_info">
       <view class="case_left flex">
         <view class="input_before">第三人</view>
@@ -39,6 +51,12 @@
         <view class="case_input"><input data-key="third_person_agent" bindblur="changeBind"  value="{{web_submitData.third_person_agent}}"></input></view>
       </view>
     </view>
+		<view class="w690 flexRowBetween meeting_info">
+		  <view class="case_left flex" style="width: 100%;">
+		    <view class="input_before" style="width:25%">第三人电话</view>
+		    <view class="case_input"><input data-key="third_person_phone" bindblur="changeBind"  value="{{web_submitData.third_person_phone}}"></input></view>
+		  </view>
+		</view>
     <view class="w690 flexRowBetween border_b">
       <view class="case_row flex1">
         <view class="input_before">案由</view>
@@ -165,12 +183,12 @@
         <view class="input_before"  style="width:30%;">提醒时间设置</view>
 
        
-            <checkbox-group bindchange="checkboxChange" style="flex-wrap:wrap;" class="flex">
+            <checkbox-group  style="flex-wrap:wrap;" class="flex">
               <label class="checkbox flex" wx:for="{{items}}">
              
-                <checkbox style="width:30rpx;height:30rpx;" value="{{item.value}}" checked="{{item.checked}}"  disabled="true" wx:if="{{web_submitData.open_time&&web_submitData.open_time-item.value<web_todayTime}}" />
+                <checkbox bindtap="checkboxChange" data-value="{{item.value}}" style="width:30rpx;height:30rpx;" value="{{item.value}}" checked="{{item.checked}}"  disabled="true" wx:if="{{web_submitData.open_time&&web_submitData.open_time-item.value<web_todayTime}}" />
                 
-                <checkbox value="{{item.value}}" checked="{{item.checked}}"  wx:else />
+                <checkbox bindtap="checkboxChange" data-value="{{item.value}}" value="{{item.value}}" checked="{{item.checked}}"  wx:else />
 
                 <view class="select_item">{{item.name}}</view>
               </label>

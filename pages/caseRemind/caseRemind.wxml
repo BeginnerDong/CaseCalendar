@@ -1,11 +1,17 @@
 <wxs module="func" src="../../utils/func.wxs" />
+<view class="empty"  catchtouchmove="true" wx:if="{{web_mainData.length==0}}">
+    <view class="empty_cont">
+        <image src="/images/empty.png"></image>
+        <view class="font30 color6" style="margin-top:30rpx;">这里空空如也~~~</view>
+    </view>
+</view>
 <block wx:for="{{web_mainData}}" wx:key="id">
-	<view class="remind flex" bindtap="intoPath" data-path="/pages/caseRemindDetail/caseRemindDetail">
+	<view class="remind flex" bindtap="intoPath" data-path="/pages/caseRemindDetail/caseRemindDetail?id={{item.id}}">
 		<view class="w690">
 			<view class="remind_cont flex">
 				<view class="remind_left">
 					<view class="user_img">
-	                  <image src="/images/img2@2x.png" class="user_img"></image>
+	                  <image src="/images/head.jpg" class="user_img"></image>
 	                </view>
 				</view>
 				<view class="remind_right">

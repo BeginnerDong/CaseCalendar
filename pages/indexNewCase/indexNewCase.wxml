@@ -6,7 +6,7 @@
     </view>
 </view>
 <block wx:for="{{web_mainData}}" wx:key="id">
-    <view class="case_box bg1 w690" bindtap="intoPath" data-path="/pages/caseDetail/caseDetail">
+    <view class="case_box bg1 w690" bindtap="intoPath" data-path="/pages/newCase/newCase?id={{item.id}}">
         <view class="case_list flex">
             <view class="case_left">原告</view>
             <view class="case_right">{{item.plaintiff}}</view>
@@ -32,5 +32,6 @@
 
 <view class="space_bottom"></view>
 <form>
-    <button class="submit_info" bindtap="intoPath" data-path="/pages/newCase/newCase">添加</button>
+    <button class="submit_info" bindtap="intoPath" data-path="/pages/newCase/newCase?open_time={{web_start_date}}">添加</button>
 </form>
+	

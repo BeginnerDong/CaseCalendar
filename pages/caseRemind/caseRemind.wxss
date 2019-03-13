@@ -4,6 +4,24 @@
 page{
 	background:#fff;
 }
+.empty{
+	width:100%;
+	height:100vh;
+	line-height:100%;
+	overflow:hidden;
+}
+.empty_cont{
+	position:absolute;
+	left:0;
+	top:30%;
+	width:100%;
+	text-align:center;
+}
+.empty_cont image{
+	width:330rpx;
+	height:260rpx;
+	margin:0 auto;
+}
 .user_img{
 	width:100rpx;
 	height:100rpx;

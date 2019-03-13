@@ -26,6 +26,42 @@ Page({
     	web_url:self.data.mainData[0][self.data.index].passage2
     })
   },
+	
+	onShareAppMessage(res) {
+		const self = this;
+		console.log(res)
+		if (res.from == 'button') {
+			self.data.shareBtn = true;
+		} else {
+			self.data.shareBtn = false;
+		}
+		return {
+			title: '办案日历',
+			path: 'pages/index/index?index=' + self.data.index ,
+			success: function(res) {
+
+				if (res.errMsg == 'shareAppMessage:ok') {
+					console.log('分享成功')
+					if (self.data.shareBtn) {
+						if (res.hasOwnProperty('shareTickets')) {
+							console.log(res.shareTickets[0]);
+							self.data.isshare = 1;
+						} else {
+							self.data.isshare = 0;
+						}
+					}
+				} else {
+					wx.showToast({
+						title: '分享失败',
+					})
+					self.data.isshare = 0;
+				}
+			},
+			fail: function(res) {
+				console.log(res)
+			}
+		}
+	},
 
   getMainData(){
     const  self =this;

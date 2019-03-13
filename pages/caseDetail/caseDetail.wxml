@@ -1,6 +1,6 @@
 <!--login.wxml-->
 <wxs module="func" src="../../utils/func.wxs" />
-<view class="w690">
+<view class="w690" style="padding:4% 4%">
   <view class="w690 bg1">
     <view class="all_tlt flex">
         <view class="user_tilte">
@@ -20,6 +20,12 @@
         <text class="font26 color2">{{web_mainData.plaintiff_agent}}</text>
       </view>
     </view>
+		<view class="w690 flexRowBetween meeting_info">
+		  <view class="case_left flex">
+		    <view class="font28 color6">原告电话</view>
+		    <view class="font26 color2">{{web_mainData.plaintiff_phone}}</view>
+		  </view>
+		</view>
     <view class="w690 bg1 flexRowBetween meeting_info">
       <view class="case_left">
         <text class="font28 color6">被告</text>
@@ -30,6 +36,12 @@
         <text class="font26 color2">{{web_mainData.defendant_agent}}</text>
       </view>
     </view>
+		<view class="w690 flexRowBetween meeting_info">
+		  <view class="case_left flex">
+		    <view class="font28 color6">被告电话</view>
+		    <view class="font26 color2">{{web_mainData.defendant_phone}}</view>
+		  </view>
+		</view>
     <view class="w690 bg1 flexRowBetween meeting_info">
       <view class="case_left">
         <text class="font28 color6" style="margin-right:38rpx;">第三人</text>
@@ -40,7 +52,12 @@
         <text class="font26 color2">{{web_mainData.third_person_agent}}</text>
       </view>
     </view>
-   
+		<view class="w690 flexRowBetween meeting_info">
+		  <view class="case_left flex">
+		    <view class="font28 color6">第三人电话</view>
+		    <view class="font26 color2">{{web_mainData.third_person_phone}}</view>
+		  </view>
+		</view>
     <view class="w690 bg1" style="border-bottom:solid 1px #eee;padding-bottom:30rpx;">
       <view class="font28 color6" style="height:80rpx;line-height:80rpx;">
         案由
@@ -58,13 +75,13 @@
     <view class="w690 meeting_info  flex">
       <view class="case_row">
         <text class="font26 color6">开庭时间</text>
-        <text class="font26 color2">{{func.timestampToTime(web_mainData.open_time)}}</text>
+        <text class="font26 color2" wx:if="{{web_mainData.open_time&&web_mainData.open_time!=0}}">{{func.timestampToTime(web_mainData.open_time)}}</text>
       </view>
     </view>
     <view class="w690 meeting_info  flex">
       <view class="case_row">
         <text class="font26 color6">调解时间</text>
-        <text class="font26 color2">{{func.timestampToTime(web_mainData.mediate_time)}}</text>
+        <text class="font26 color2" wx:if="{{web_mainData.mediate_time&&web_mainData.mediate_time!=0}}">{{func.timestampToTime(web_mainData.mediate_time)}}</text>
       </view>
     </view>
     <view class="w690 meeting_info  flex">
@@ -75,6 +92,7 @@
     </view>
   </view>
 </view>
+<view style="width:100%;height:88rpx"></view>
 <button class="submit_info" bindtap="intoPathRedirect" data-path="/pages/index/index">
   返回首页
 </button>

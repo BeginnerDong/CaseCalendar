@@ -61,9 +61,11 @@ class Api extends Base{
             url:'Common/WxFormId/add',
             type:'post',
             data:{
-                tokenFuncName:'getProjectToken',
-                form_id:form_id,
-                end_time:end_time,
+				tokenFuncName:'getProjectToken',
+				data:{
+					form_id:form_id,
+					end_time:end_time,	
+				}
             },
         };
         this.request(allParams);       

@@ -31,6 +31,7 @@ Page({
             } else {
                 api.showToast('数据错误', 'none');
             };
+			console.log('self.data.mainData',self.data.mainData)
             api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
             self.setData({
                 web_mainData: self.data.mainData,

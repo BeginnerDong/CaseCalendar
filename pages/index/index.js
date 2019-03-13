@@ -27,6 +27,9 @@ Page({
     onLoad(options) {
         const self = this;
         api.commonInit(self);
+		if(options.index){
+			api.pathTo('/pages/indexDetail/indexDetail?index='+options.index,'nav')
+		};
         self.getSliderData();
         self.getMainData()
     },

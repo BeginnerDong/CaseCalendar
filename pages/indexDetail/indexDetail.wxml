@@ -6,5 +6,6 @@
          </view> 
 	</view>
 </view>-->
-
-<web-view src="{{web_url}}"></web-view>
+<view style="width:50%;height:50%;overflow:hidden;">
+	<web-view src="{{web_url}}"></web-view>
+</view>

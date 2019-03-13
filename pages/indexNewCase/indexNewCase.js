@@ -22,8 +22,16 @@ Page({
     };
     
     api.commonInit(self);
-    self.getMainData();
+		self.setData({
+			web_start_date:self.data.start_date
+		});
+    
   },
+	
+	onShow(){
+		const self = this;
+		self.getMainData(true);
+	},
 
   getMainData(isNew){
     const  self =this;

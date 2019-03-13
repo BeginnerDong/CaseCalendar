@@ -9,6 +9,7 @@ Page({
 
         searchItem: {
             thirdapp_id: getApp().globalData.thirdapp_id,
+			type:5
         },
         mainData: [],
         isFirstLoadAllStandard: ['getMainData'],
@@ -30,18 +31,20 @@ Page({
         postData.tokenFuncName = 'getProjectToken';
         postData.paginate = api.cloneForm(self.data.paginate);
         postData.searchItem = api.cloneForm(self.data.searchItem);
+		postData.searchItem.user_no = wx.getStorageSync('info').user_no;
         const callback = (res) => {
             if (res.info.data.length > 0) {
-                self.data.mainData.push.apply(self.data.mainData, res.info.data);
-                for (var i = 0; i < self.data.mainData.length; i++) {
-                    var time = api.timeToTimestamp(self.data.mainData[i].create_time)
-
-                    self.data.mainData[i].create_time = api.getDateDiff(time)
-                    console.log(self.data.mainData[i].create_time)
+               
+                for (var i = 0; i < res.info.data.length; i++) {
+                    var time = api.timeToTimestamp(res.info.data[i].create_time)
+                    
+                    res.info.data[i].create_time = api.getDateDiff(time)
+           
                 }
+				 self.data.mainData.push.apply(self.data.mainData, res.info.data);
             } else {
                 self.data.isLoadAll = true;
-                api.showToast('没有更多了', 'fail');
+
             };
             api.buttonCanClick(self, true);
             api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);

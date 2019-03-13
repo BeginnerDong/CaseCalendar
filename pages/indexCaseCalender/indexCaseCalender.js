@@ -28,9 +28,13 @@ Page({
         self.data.todayYear = todayDate.getFullYear();
         self.data.todayDay = todayDate.getDate();
          console.log('self.data.todayYear',self.data.todayYear)
-         self.calenderInit();
+         
     },
-
+	
+	onShow(){
+		const self = this;
+		self.calenderInit();
+	},
 
     calenderInit(){
         const self = this;
@@ -124,7 +128,7 @@ Page({
           api.checkLoadAll(self.data.isFirstLoadAllStandard,'mainData',self);
           self.setData({
             web_dateData:self.data.dateData,
-            web_signData:self.data.signData,
+            
           });
         };
         api.messageGet(postData,callback);
